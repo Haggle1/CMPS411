@@ -1,0 +1,42 @@
+﻿@model IDScanner.Attendance
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Attendance</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Clock_In)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clock_In)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Clock_Out)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clock_Out)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.Fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.Fname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
