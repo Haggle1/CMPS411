@@ -216,4 +216,11 @@ C:\Users\Shelby\Desktop\411\IDScanner\obj\Debug\IDScanner.csprojResolveAssemblyR
 \\vmware-host\Shared Folders\Desktop\411 1112\trunk\IDScanner\bin\System.Web.WebPages.Razor.xml
 \\vmware-host\Shared Folders\Desktop\411 1112\trunk\IDScanner\obj\Debug\IDScanner.dll
 \\vmware-host\Shared Folders\Desktop\411 1112\trunk\IDScanner\obj\Debug\IDScanner.pdb
-\\vmware-host\Shared Folders\Desktop\411 1112\trunk\IDScanner\obj\Debug\IDScanner.csprojResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Desktop\411 1112\trunk\IDScanner\bin\Microsoft.Web.XmlTransform.dll
+\\vmware-host\Shared Folders\Desktop\411 1112\trunk\IDScanner\bin\NuGet.Core.dll
+\\vmware-host\Shared Folders\Desktop\411 1112\trunk\IDScanner\bin\System.Net.Http.Formatting.dll
+\\vmware-host\Shared Folders\Desktop\411 1112\trunk\IDScanner\bin\System.Web.Http.dll
+\\vmware-host\Shared Folders\Desktop\411 1112\trunk\IDScanner\bin\System.Web.Http.WebHost.dll
+\\vmware-host\Shared Folders\Desktop\411 1112\trunk\IDScanner\bin\System.Net.Http.Formatting.xml
+\\vmware-host\Shared Folders\Desktop\411 1112\trunk\IDScanner\bin\System.Web.Http.xml
+\\vmware-host\Shared Folders\Desktop\411 1112\trunk\IDScanner\bin\System.Web.Http.WebHost.xml
