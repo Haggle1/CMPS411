@@ -1,0 +1,50 @@
+﻿@model IEnumerable<IDScanner.Attendance>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Attendance</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Clock In")
+        </th>
+        <th>
+            @Html.DisplayName("Clock Out")
+        </th>
+        <th>
+            @Html.DisplayName("First Name")
+        </th>
+        <th>
+            @Html.DisplayName("Last Name")
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Clock_In)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Clock_Out)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.Fname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.Lname)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SID })
+        </td>
+    </tr>
+}
+
+</table>
