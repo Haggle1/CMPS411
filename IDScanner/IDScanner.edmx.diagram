@@ -17,26 +17,6 @@
         <AssociationConnector Association="SchoolTrackerModel.FK_Login_Faculty" ManuallyRouted="false" />
         <AssociationConnector Association="SchoolTrackerModel.FK_Schedule_Student" ManuallyRouted="false" />
         <AssociationConnector Association="SchoolTrackerModel.FK_Courses_Faculties" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_Applications" Width="1.5" PointX="5.75" PointY="12.875" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_Membership" Width="1.5" PointX="13" PointY="11.5" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_Paths" Width="1.5" PointX="8" PointY="11.375" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_PersonalizationAllUsers" Width="1.5" PointX="10.25" PointY="14.875" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_PersonalizationPerUser" Width="1.5" PointX="10.25" PointY="11.375" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_Profile" Width="1.5" PointX="12.5" PointY="18.875" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_Roles" Width="1.5" PointX="8" PointY="20.75" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_SchemaVersions" Width="1.5" PointX="5.75" PointY="5.75" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_Users" Width="1.5" PointX="10.25" PointY="18.375" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_WebEvent_Events" Width="1.5" PointX="0.75" PointY="6.75" />
-        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Me__Appli__689D8392" />
-        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Pa__Appli__16644E42" />
-        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Ro__Appli__0539C240" />
-        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Us__Appli__5A4F643B" />
-        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Me__UserI__6991A7CB" />
-        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Pe__PathI__1C1D2798" />
-        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Pe__PathI__1FEDB87C" />
-        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Pe__UserI__20E1DCB5" />
-        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Pr__UserI__7CA47C3F" />
-        <AssociationConnector Association="SchoolTrackerModel.aspnet_UsersInRoles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
