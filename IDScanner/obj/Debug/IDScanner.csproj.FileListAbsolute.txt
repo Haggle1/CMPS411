@@ -216,3 +216,4 @@ C:\Users\Shelby\Desktop\411\IDScanner\obj\Debug\IDScanner.csprojResolveAssemblyR
 \\vmware-host\Shared Folders\Desktop\CMPS411GitHub\CMPS411\IDScanner\bin\System.Web.WebPages.Razor.xml
 \\vmware-host\Shared Folders\Desktop\CMPS411GitHub\CMPS411\IDScanner\obj\Debug\IDScanner.dll
 \\vmware-host\Shared Folders\Desktop\CMPS411GitHub\CMPS411\IDScanner\obj\Debug\IDScanner.pdb
+\\vmware-host\Shared Folders\Desktop\CMPS411GitHub\CMPS411\IDScanner\obj\Debug\IDScanner.csprojResolveAssemblyReference.cache

@@ -64,4 +64,8 @@ namespace IDScanner.Models
         [Display(Name = "Role")]
         public string Role { get; set; }
     }
+    public class Role
+    {
+       // public string Role { get; set; }
+    }
 }
