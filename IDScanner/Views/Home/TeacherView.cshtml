@@ -15,6 +15,7 @@
         <br />
          @Html.DisplayName(DateTime.Today.ToLongTimeString())
         <br />
+        @Html.DisplayName(TimeZone.CurrentTimeZone.StandardName.ToString())
     </h2> 
     
     
@@ -22,7 +23,7 @@
             @foreach(var cour in Model.Course){
                foreach (var teach in Model.Faculty){
                     @:<h2>
-                         @Html.DisplayName("Current Time you know this works:")
+                         @Html.DisplayName("Maybe:")
                     if(teach.FID == cour.FID && DateTime.Now > cour.TimeStart && DateTime.Now < cour.TimeEnd){
                         <br />
                  @Html.DisplayName("should:")

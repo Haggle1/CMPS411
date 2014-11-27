@@ -16,6 +16,11 @@ namespace IDScanner
     {
         public Faculty()
         {
+            TimeZone zone = TimeZone.CurrentTimeZone;
+            string standard = zone.StandardName;
+            string daylight = zone.DaylightName;
+            Console.WriteLine(standard);
+            Console.WriteLine(daylight);
             this.Courses = new HashSet<Cours>();
         }
     
