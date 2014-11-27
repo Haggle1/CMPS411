@@ -8,6 +8,13 @@
         @Html.DisplayName("Current Time you know this works:")
         <br />
         @Html.DisplayName(DateTime.Now.ToShortTimeString())
+        <br />
+        @Html.DisplayName(DateTime.Now.ToLocalTime().ToString())
+        <br />
+        @Html.DisplayName(DateTime.Now.ToString())
+        <br />
+         @Html.DisplayName(DateTime.Today.ToLongTimeString())
+        <br />
     </h2> 
     
     
@@ -15,9 +22,10 @@
             @foreach(var cour in Model.Course){
                foreach (var teach in Model.Faculty){
                     @:<h2>
-
+                         @Html.DisplayName("Current Time you know this works:")
                     if(teach.FID == cour.FID && DateTime.Now > cour.TimeStart && DateTime.Now < cour.TimeEnd){
                         <br />
+                 @Html.DisplayName("should:")
                         @Html.DisplayFor(modelItem => teach.Fac_Fname)
                         @Html.DisplayFor(modelItem => teach.Fac_Lname)
                         @:'s  
