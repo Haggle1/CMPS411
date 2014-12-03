@@ -450,7 +450,6 @@
     <Content Include="Views\aspnet_Users\Details.cshtml" />
     <Content Include="Views\aspnet_Users\Edit.cshtml" />
     <Content Include="Views\aspnet_Users\Index.cshtml" />
-    <Content Include="Views\Account\Profile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
