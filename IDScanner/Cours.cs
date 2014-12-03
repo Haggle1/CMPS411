@@ -24,9 +24,9 @@ namespace IDScanner
         public System.DateTime TimeStart { get; set; }
         public System.DateTime TimeEnd { get; set; }
         public string Description { get; set; }
-        public string FID { get; set; }
+        public System.Guid FID { get; set; }
     
         public virtual ICollection<Schedule> Schedules { get; set; }
-        public virtual Faculty Faculty { get; set; }
+        public virtual aspnet_Users aspnet_Users { get; set; }
     }
 }

@@ -4,19 +4,44 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fec2e8a61dcc47aba2095345ab088b69" Name="Diagram1">
-        <EntityTypeShape EntityType="SchoolTrackerModel.Attendance" Width="1.5" PointX="4.625" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.Cours" Width="1.5" PointX="2.625" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.Faculty" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.Login" Width="1.5" PointX="0.5" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.Schedule" Width="1.5" PointX="2.625" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.Student" Width="1.5" PointX="4.625" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchoolTrackerModel.sysdiagram" Width="1.5" PointX="6.5" PointY="0.625" IsExpanded="true" />
-        <AssociationConnector Association="SchoolTrackerModel.FK_Attendances_Students" ManuallyRouted="false" />
-        <AssociationConnector Association="SchoolTrackerModel.FK_Schedule_Course" ManuallyRouted="false" />
-        <AssociationConnector Association="SchoolTrackerModel.FK_Login_Faculty" ManuallyRouted="false" />
-        <AssociationConnector Association="SchoolTrackerModel.FK_Schedule_Student" ManuallyRouted="false" />
-        <AssociationConnector Association="SchoolTrackerModel.FK_Courses_Faculties" />
+      <Diagram DiagramId="fec2e8a61dcc47aba2095345ab088b69" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="SchoolTrackerModel.C__MigrationHistory" Width="1.5" PointX="7.75" PointY="2.25" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_Applications" Width="1.5" PointX="0.75" PointY="9.625" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_Membership" Width="1.5" PointX="8" PointY="8.125" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_Paths" Width="1.5" PointX="3" PointY="8.125" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_PersonalizationAllUsers" Width="1.5" PointX="5.25" PointY="11.5" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_PersonalizationPerUser" Width="1.5" PointX="5.25" PointY="8.125" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_Profile" Width="1.5" PointX="7.5" PointY="15.625" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_Roles" Width="1.5" PointX="3" PointY="17.5" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_SchemaVersions" Width="1.5" PointX="7.75" PointY="5.25" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_Users" Width="1.5" PointX="5.25" PointY="14.875" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.aspnet_WebEvent_Events" Width="1.5" PointX="10.75" PointY="10.25" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.AspNetRole" Width="1.5" PointX="0.75" PointY="4" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="5.125" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="2.625" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.AspNetUser" Width="1.5" PointX="3" PointY="2.875" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.Attendance" Width="1.5" PointX="13" PointY="6.625" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.Cours" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.Schedule" Width="1.5" PointX="13" PointY="4" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.Student" Width="1.5" PointX="10.75" PointY="4" />
+        <EntityTypeShape EntityType="SchoolTrackerModel.sysdiagram" Width="1.5" PointX="0.75" PointY="13.25" />
+        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Me__Appli__06CD04F7" />
+        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Pa__Appli__3864608B" />
+        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Ro__Appli__25518C17" />
+        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Us__Appli__76969D2E" />
+        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Me__UserI__07C12930" />
+        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Pe__PathI__3E1D39E1" />
+        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Pe__PathI__41EDCAC5" />
+        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Pe__UserI__42E1EEFE" />
+        <AssociationConnector Association="SchoolTrackerModel.FK__aspnet_Pr__UserI__1BC821DD" />
+        <AssociationConnector Association="SchoolTrackerModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="SchoolTrackerModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="SchoolTrackerModel.FK_Attendances_Students" />
+        <AssociationConnector Association="SchoolTrackerModel.FK_Schedule_Course" />
+        <AssociationConnector Association="SchoolTrackerModel.FK_Schedule_Student" />
+        <AssociationConnector Association="SchoolTrackerModel.aspnet_UsersInRoles" />
+        <AssociationConnector Association="SchoolTrackerModel.AspNetUserRoles" />
+        <AssociationConnector Association="SchoolTrackerModel.FK_Courses_aspnet_Users" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

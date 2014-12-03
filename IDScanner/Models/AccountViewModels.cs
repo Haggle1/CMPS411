@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace IDScanner.Models
 {
@@ -50,6 +51,14 @@ namespace IDScanner.Models
         public string UserName { get; set; }
 
         [Required]
+        [Display(Name = "First Name")]
+        public string FName { get; set; }
+
+        [Required]
+        [Display(Name = "Last Name")]
+        public string LName { get; set; }
+
+        [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
@@ -63,9 +72,5 @@ namespace IDScanner.Models
         [Required]
         [Display(Name = "Role")]
         public string Role { get; set; }
-    }
-    public class Role
-    {
-       // public string Role { get; set; }
     }
 }

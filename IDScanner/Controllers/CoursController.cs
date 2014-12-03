@@ -39,7 +39,7 @@ namespace IDScanner.Controllers
         // GET: Cours/Create
         public ActionResult Create()
         {
-            ViewBag.FID = new SelectList(db.Faculties, "FID", "Fac_Fname");
+            ViewBag.FID = new SelectList(db.aspnet_Users, "UserId", "UserName");
             return View();
         }
 

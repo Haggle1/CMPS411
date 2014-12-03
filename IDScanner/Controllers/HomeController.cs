@@ -35,11 +35,19 @@ namespace IDScanner.Controllers
             IDScanner.ViewModels.TeacherViewModel viewmodel = new IDScanner.ViewModels.TeacherViewModel();
             viewmodel.Attendance = db.Attendances; 
             viewmodel.Course = db.Courses;
-            viewmodel.Faculty = db.Faculties;
+            viewmodel.Users = db.aspnet_Users;
             viewmodel.Schedule = db.Schedules;
             viewmodel.Student = db.Students;
 
+            
+
             return View(viewmodel);
+        }
+
+
+        public ActionResult hi()
+        {
+            return View();
         }
 
     }

@@ -16,9 +16,9 @@ namespace IDScanner
     {
         public string ID { get; set; }
         public string CourseID { get; set; }
+        public int ScheduleID { get; set; }
     
         public virtual Cours Cours { get; set; }
         public virtual Student Student { get; set; }
-        public virtual Faculty Faculty { get; set; }
     }
 }

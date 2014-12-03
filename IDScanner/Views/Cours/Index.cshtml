@@ -46,10 +46,10 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Faculty.Fac_Fname)
+            @Html.DisplayFor(modelItem => item.aspnet_Users.FName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Faculty.Fac_Lname)
+            @Html.DisplayFor(modelItem => item.aspnet_Users.LName)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.CID }) |

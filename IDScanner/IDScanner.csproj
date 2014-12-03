@@ -185,20 +185,116 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="AspNetRole.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUser.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaim.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogin.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Applications.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership_GetPassword1_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership_GetPassword2_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership_GetPasswordWithFormat1_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership_GetPasswordWithFormat2_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership_GetPasswordWithFormat_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership_GetPassword_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership_GetUserByName1_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership_GetUserByName2_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership_GetUserByName_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership_GetUserByUserId1_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership_GetUserByUserId2_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership_GetUserByUserId_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Paths.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_PersonalizationAllUsers.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_PersonalizationPerUser.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Profile.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Profile_GetProperties1_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Profile_GetProperties2_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Profile_GetProperties_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Roles.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_SchemaVersions.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Users.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_UsersInRoles_RemoveUsersFromRoles1_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_UsersInRoles_RemoveUsersFromRoles2_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_UsersInRoles_RemoveUsersFromRoles_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_WebEvent_Events.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
     <Compile Include="Attendance.cs">
       <DependentUpon>IDScanner.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\aspnet_UsersController.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
     <Compile Include="Controllers\CoursController.cs" />
-    <Compile Include="Controllers\FacultiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SchedulesController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Cours.cs">
       <DependentUpon>IDScanner.tt</DependentUpon>
     </Compile>
-    <Compile Include="Faculty.cs">
+    <Compile Include="C__MigrationHistory.cs">
       <DependentUpon>IDScanner.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -219,13 +315,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IDScanner.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
-      <DependentUpon>IDScanner.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schedule.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition1_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition2_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams1_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams2_Result.cs">
+      <DependentUpon>IDScanner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
       <DependentUpon>IDScanner.tt</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
@@ -235,14 +347,48 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>IDScanner.tt</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\AdminViewModel.cs" />
     <Compile Include="ViewModels\TeacherViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\jquery-ui-timepicker-addon.css" />
     <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -250,6 +396,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
     <EntityDeploy Include="IDScanner.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>IDScanner.Designer.cs</LastGenOutput>
@@ -269,11 +417,15 @@
       <LastGenOutput>IDScanner.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.11.1.js" />
     <Content Include="Scripts\jquery-ui-sliderAccess.js" />
@@ -284,7 +436,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
@@ -318,11 +473,6 @@
     <Content Include="Views\Student\Details.cshtml" />
     <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\Student\Index.cshtml" />
-    <Content Include="Views\Faculties\Create.cshtml" />
-    <Content Include="Views\Faculties\Delete.cshtml" />
-    <Content Include="Views\Faculties\Details.cshtml" />
-    <Content Include="Views\Faculties\Edit.cshtml" />
-    <Content Include="Views\Faculties\Index.cshtml" />
     <Content Include="Views\Schedules\Create.cshtml" />
     <Content Include="Views\Schedules\Delete.cshtml" />
     <Content Include="Views\Schedules\Details.cshtml" />
@@ -339,7 +489,12 @@
     <Content Include="Views\Attendances\Edit.cshtml" />
     <Content Include="Views\Attendances\Index.cshtml" />
     <Content Include="Views\Home\TeacherView.cshtml" />
-    <Content Include="Views\Home\AdminView.cshtml" />
+    <Content Include="Views\aspnet_Users\Create.cshtml" />
+    <Content Include="Views\aspnet_Users\Delete.cshtml" />
+    <Content Include="Views\aspnet_Users\Details.cshtml" />
+    <Content Include="Views\aspnet_Users\Edit.cshtml" />
+    <Content Include="Views\aspnet_Users\Index.cshtml" />
+    <Content Include="Views\Account\Profile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

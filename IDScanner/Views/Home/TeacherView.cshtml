@@ -5,37 +5,31 @@
 }
 <center>
     <h2>
-        @Html.DisplayName("Current Time you know this works:")
+        @Html.DisplayName("Current Time:")
         <br />
         @Html.DisplayName(DateTime.Now.ToShortTimeString())
-        <br />
-        @Html.DisplayName(DateTime.Now.ToLocalTime().ToString())
-        <br />
-        @Html.DisplayName(DateTime.Now.ToString())
-        <br />
-         @Html.DisplayName(DateTime.Today.ToLongTimeString())
-        <br />
-        @Html.DisplayName(TimeZone.CurrentTimeZone.StandardName.ToString())
     </h2> 
     
     
 
             @foreach(var cour in Model.Course){
-               foreach (var teach in Model.Faculty){
+               foreach (var teach in Model.Users){
                     @:<h2>
-                         @Html.DisplayName("Maybe:")
-                    if(teach.FID == cour.FID && DateTime.Now > cour.TimeStart && DateTime.Now < cour.TimeEnd){
+
+                    if(teach.UserId == cour.FID && DateTime.Now > cour.TimeStart && DateTime.Now < cour.TimeEnd){
                         <br />
-                 @Html.DisplayName("should:")
-                        @Html.DisplayFor(modelItem => teach.Fac_Fname)
-                        @Html.DisplayFor(modelItem => teach.Fac_Lname)
+                        @Html.DisplayFor(modelItem => teach.FName)
+                        @Html.DisplayFor(modelItem => teach.LName)
                         @:'s  
                         @Html.DisplayFor(modelItem => cour.CourseName)
                         @: class.
                         <br />
-                        @Html.DisplayName(cour.TimeStart.ToShortTimeString())       
+                      
+                        
+                        @Html.DisplayName(cour.TimeStart.ToShortTimeString())
                         @: to
                         @Html.DisplayName(cour.TimeEnd.ToShortTimeString())
+
                         @:</h2>
                         <br />
 
@@ -70,12 +64,12 @@
 
                                     @Html.DisplayFor(modelItem => item.Lname)
                                     </td>
-                                    <td>
+                                    @*<td>  !causes error for teachers, need to look into this
                                     @Html.DisplayFor(modelItem => item.Attendance.Clock_In)
                                     </td>
                                     <td>
                                     @Html.DisplayFor(modelItem => item.Attendance.Clock_Out)
-                                    </td>
+                                    </td>*@
 
                                     </tr>
                                     }

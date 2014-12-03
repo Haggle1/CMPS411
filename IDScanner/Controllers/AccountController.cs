@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using IDScanner.Models;
 using System.Web.Security;
+using System.Data.Entity;
 
 namespace IDScanner.Controllers
 {
@@ -92,7 +93,8 @@ namespace IDScanner.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser() { UserName = model.UserName };
+                var user = new ApplicationUser() { UserName = model.UserName 
+                };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -101,6 +103,13 @@ namespace IDScanner.Controllers
 
                     if (!Roles.IsUserInRole(user.UserName, model.Role))
                         Roles.AddUserToRole(user.UserName, model.Role);
+                    var db = new SchoolTrackerEntities1();
+                    var aspUser = db.aspnet_Users.Where(x => x.UserName == user.UserName).FirstOrDefault();
+                    aspUser.FName = model.FName;
+                    aspUser.LName = model.LName;
+                    db.Entry(aspUser).State = EntityState.Modified;
+                    db.SaveChanges();
+
                     return RedirectToAction("TeacherView", "Home");
                 }
                 else
@@ -110,6 +119,8 @@ namespace IDScanner.Controllers
             }
 
             // If we got this far, something failed, redisplay form
+            var roles = Roles.GetAllRoles();
+            ViewBag.roles = new SelectList(roles);
             return View(model);
         }
 
@@ -140,7 +151,7 @@ namespace IDScanner.Controllers
                 message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
                 : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
                 : message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
-                : message == ManageMessageId.Error ? "An error has occurred dude."
+                : message == ManageMessageId.Error ? "An error has occurred."
                 : "";
             ViewBag.HasLocalPassword = HasPassword();
             ViewBag.ReturnUrl = Url.Action("Manage");

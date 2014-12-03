@@ -6,41 +6,291 @@
     <edmx:StorageModels>
     <Schema Namespace="SchoolTrackerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="SchoolTrackerModelStoreContainer">
+    <EntitySet Name="C__MigrationHistory" EntityType="SchoolTrackerModel.Store.C__MigrationHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Applications" EntityType="SchoolTrackerModel.Store.aspnet_Applications" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Membership" EntityType="SchoolTrackerModel.Store.aspnet_Membership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Paths" EntityType="SchoolTrackerModel.Store.aspnet_Paths" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="SchoolTrackerModel.Store.aspnet_PersonalizationAllUsers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="SchoolTrackerModel.Store.aspnet_PersonalizationPerUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Profile" EntityType="SchoolTrackerModel.Store.aspnet_Profile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Roles" EntityType="SchoolTrackerModel.Store.aspnet_Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_SchemaVersions" EntityType="SchoolTrackerModel.Store.aspnet_SchemaVersions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Users" EntityType="SchoolTrackerModel.Store.aspnet_Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_WebEvent_Events" EntityType="SchoolTrackerModel.Store.aspnet_WebEvent_Events" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetRoles" EntityType="SchoolTrackerModel.Store.AspNetRoles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUserClaims" EntityType="SchoolTrackerModel.Store.AspNetUserClaims" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUserLogins" EntityType="SchoolTrackerModel.Store.AspNetUserLogins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUsers" EntityType="SchoolTrackerModel.Store.AspNetUsers" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Attendances" EntityType="SchoolTrackerModel.Store.Attendances" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Courses" EntityType="SchoolTrackerModel.Store.Courses" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Faculties" EntityType="SchoolTrackerModel.Store.Faculties" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Logins" EntityType="SchoolTrackerModel.Store.Logins" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Schedules" EntityType="SchoolTrackerModel.Store.Schedules" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Students" EntityType="SchoolTrackerModel.Store.Students" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="sysdiagrams" EntityType="SchoolTrackerModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_UsersInRoles" EntityType="SchoolTrackerModel.Store.aspnet_UsersInRoles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUserRoles" EntityType="SchoolTrackerModel.Store.AspNetUserRoles" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__aspnet_Me__Appli__06CD04F7" Association="SchoolTrackerModel.Store.FK__aspnet_Me__Appli__06CD04F7">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pa__Appli__3864608B" Association="SchoolTrackerModel.Store.FK__aspnet_Pa__Appli__3864608B">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro__Appli__25518C17" Association="SchoolTrackerModel.Store.FK__aspnet_Ro__Appli__25518C17">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__Appli__76969D2E" Association="SchoolTrackerModel.Store.FK__aspnet_Us__Appli__76969D2E">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__UserI__07C12930" Association="SchoolTrackerModel.Store.FK__aspnet_Me__UserI__07C12930">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__3E1D39E1" Association="SchoolTrackerModel.Store.FK__aspnet_Pe__PathI__3E1D39E1">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__41EDCAC5" Association="SchoolTrackerModel.Store.FK__aspnet_Pe__PathI__41EDCAC5">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__UserI__42E1EEFE" Association="SchoolTrackerModel.Store.FK__aspnet_Pe__UserI__42E1EEFE">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pr__UserI__1BC821DD" Association="SchoolTrackerModel.Store.FK__aspnet_Pr__UserI__1BC821DD">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="SchoolTrackerModel.Store.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="SchoolTrackerModel.Store.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
     <AssociationSet Name="FK_Attendances_Students" Association="SchoolTrackerModel.Store.FK_Attendances_Students">
-      <End Role="Students" EntitySet="Students" />
-      <End Role="Attendances" EntitySet="Attendances" />
+      <End Role="Student" EntitySet="Students" />
+      <End Role="Attendance" EntitySet="Attendances" />
     </AssociationSet>
     <AssociationSet Name="FK_Schedule_Course" Association="SchoolTrackerModel.Store.FK_Schedule_Course">
-      <End Role="Courses" EntitySet="Courses" />
-      <End Role="Schedules" EntitySet="Schedules" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Login_Faculty" Association="SchoolTrackerModel.Store.FK_Login_Faculty">
-      <End Role="Faculties" EntitySet="Faculties" />
-      <End Role="Logins" EntitySet="Logins" />
+      <End Role="Cours" EntitySet="Courses" />
+      <End Role="Schedule" EntitySet="Schedules" />
     </AssociationSet>
     <AssociationSet Name="FK_Schedule_Student" Association="SchoolTrackerModel.Store.FK_Schedule_Student">
-      <End Role="Students" EntitySet="Students" />
-      <End Role="Schedules" EntitySet="Schedules" />
+      <End Role="Student" EntitySet="Students" />
+      <End Role="Schedule" EntitySet="Schedules" />
     </AssociationSet>
-    <AssociationSet Name="FK_Courses_Faculties" Association="SchoolTrackerModel.Store.FK_Courses_Faculties">
-      <End Role="Faculty" EntitySet="Faculties" />
+    <AssociationSet Name="FK_aspnet_UsersInRoles_aspnet_Roles" Association="SchoolTrackerModel.Store.FK_aspnet_UsersInRoles_aspnet_Roles">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aspnet_UsersInRoles_aspnet_Users" Association="SchoolTrackerModel.Store.FK_aspnet_UsersInRoles_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserRoles_AspNetRole" Association="SchoolTrackerModel.Store.FK_AspNetUserRoles_AspNetRole">
+      <End Role="AspNetRole" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserRoles_AspNetUser" Association="SchoolTrackerModel.Store.FK_AspNetUserRoles_AspNetUser">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Courses_aspnet_Users" Association="SchoolTrackerModel.Store.FK_Courses_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
       <End Role="Cours" EntitySet="Courses" />
     </AssociationSet>
   </EntityContainer>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="ContextKey" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" Nullable="false" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" Nullable="true" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordFormat" Type="int" Nullable="false" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="MobilePIN" Type="nvarchar" Nullable="true" MaxLength="16" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="LoweredEmail" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="PasswordQuestion" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="PasswordAnswer" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="aspnet_Paths">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredPath" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationAllUsers">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PageSettings" Type="varbinary(max)" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationPerUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="PageSettings" Type="varbinary(max)" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PropertyNames" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PropertyValuesString" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PropertyValuesBinary" Type="varbinary(max)" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredRoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Description" Type="nvarchar" Nullable="true" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_SchemaVersions">
+    <Key>
+      <PropertyRef Name="Feature" />
+      <PropertyRef Name="CompatibleSchemaVersion" />
+    </Key>
+    <Property Name="Feature" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="CompatibleSchemaVersion" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="IsCurrentVersion" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredUserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="MobileAlias" Type="nvarchar" Nullable="true" MaxLength="16" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+    <Property Name="FName" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="LName" Type="varchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="aspnet_WebEvent_Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="char" Nullable="false" MaxLength="32" />
+    <Property Name="EventTimeUtc" Type="datetime" Nullable="false" />
+    <Property Name="EventTime" Type="datetime" Nullable="false" />
+    <Property Name="EventType" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="EventSequence" Type="decimal" Nullable="false" Precision="19" Scale="0" />
+    <Property Name="EventOccurrence" Type="decimal" Nullable="false" Precision="19" Scale="0" />
+    <Property Name="EventCode" Type="int" Nullable="false" />
+    <Property Name="EventDetailCode" Type="int" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" Nullable="true" MaxLength="1024" />
+    <Property Name="ApplicationPath" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="ApplicationVirtualPath" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="MachineName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="RequestUrl" Type="nvarchar" Nullable="true" MaxLength="1024" />
+    <Property Name="ExceptionType" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="Details" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="ClaimType" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="ProviderKey" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UserId" Type="nvarchar" Nullable="false" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" Nullable="true" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
   <EntityType Name="Attendances">
     <Key>
-      <PropertyRef Name="SID" />
+      <PropertyRef Name="ID" />
     </Key>
     <Property Name="SID" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="Clock_In" Type="datetime" Nullable="false" />
     <Property Name="Clock_Out" Type="datetime" Nullable="true" />
+    <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
   </EntityType>
   <EntityType Name="Courses">
     <Key>
@@ -51,31 +301,15 @@
     <Property Name="TimeStart" Type="datetime" Nullable="false" />
     <Property Name="TimeEnd" Type="datetime" Nullable="false" />
     <Property Name="Description" Type="varchar(max)" Nullable="true" />
-    <Property Name="FID" Type="varchar" Nullable="true" MaxLength="50" />
-  </EntityType>
-  <EntityType Name="Faculties">
-    <Key>
-      <PropertyRef Name="FID" />
-    </Key>
-    <Property Name="FID" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="Fac_Fname" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="Fac_Lname" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="AccessLvl" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Logins">
-    <Key>
-      <PropertyRef Name="FID" />
-    </Key>
-    <Property Name="FID" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="FID" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="Schedules">
     <Key>
-      <PropertyRef Name="ID" />
-      <PropertyRef Name="CourseID" />
+      <PropertyRef Name="ScheduleID" />
     </Key>
     <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="CourseID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ScheduleID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Students">
     <Key>
@@ -95,63 +329,251 @@
     <Property Name="version" Type="int" Nullable="true" />
     <Property Name="definition" Type="varbinary(max)" Nullable="true" />
   </EntityType>
-  <Association Name="FK_Attendances_Students">
-    <End Role="Students" Type="SchoolTrackerModel.Store.Students" Multiplicity="1" />
-    <End Role="Attendances" Type="SchoolTrackerModel.Store.Attendances" Multiplicity="0..1" />
+  <EntityType Name="aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="aspnet_Roles_RoleId" />
+      <PropertyRef Name="aspnet_Users_UserId" />
+    </Key>
+    <Property Name="aspnet_Roles_RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="aspnet_Users_UserId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="AspNetRoles_Id" />
+      <PropertyRef Name="AspNetUsers_Id" />
+    </Key>
+    <Property Name="AspNetRoles_Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="AspNetUsers_Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+  </EntityType>
+  <Association Name="FK__aspnet_Me__Appli__06CD04F7">
+    <End Role="aspnet_Applications" Type="SchoolTrackerModel.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="SchoolTrackerModel.Store.aspnet_Membership" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Students">
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pa__Appli__3864608B">
+    <End Role="aspnet_Applications" Type="SchoolTrackerModel.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Paths" Type="SchoolTrackerModel.Store.aspnet_Paths" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro__Appli__25518C17">
+    <End Role="aspnet_Applications" Type="SchoolTrackerModel.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Roles" Type="SchoolTrackerModel.Store.aspnet_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__Appli__76969D2E">
+    <End Role="aspnet_Applications" Type="SchoolTrackerModel.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Users" Type="SchoolTrackerModel.Store.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__UserI__07C12930">
+    <End Role="aspnet_Users" Type="SchoolTrackerModel.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="SchoolTrackerModel.Store.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__3E1D39E1">
+    <End Role="aspnet_Paths" Type="SchoolTrackerModel.Store.aspnet_Paths" Multiplicity="1" />
+    <End Role="aspnet_PersonalizationAllUsers" Type="SchoolTrackerModel.Store.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__41EDCAC5">
+    <End Role="aspnet_Paths" Type="SchoolTrackerModel.Store.aspnet_Paths" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="SchoolTrackerModel.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__UserI__42E1EEFE">
+    <End Role="aspnet_Users" Type="SchoolTrackerModel.Store.aspnet_Users" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="SchoolTrackerModel.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pr__UserI__1BC821DD">
+    <End Role="aspnet_Users" Type="SchoolTrackerModel.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Profile" Type="SchoolTrackerModel.Store.aspnet_Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Profile">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUser" Type="SchoolTrackerModel.Store.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaim" Type="SchoolTrackerModel.Store.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaim">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUser" Type="SchoolTrackerModel.Store.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogin" Type="SchoolTrackerModel.Store.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogin">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Attendances_Students">
+    <End Role="Student" Type="SchoolTrackerModel.Store.Students" Multiplicity="1" />
+    <End Role="Attendance" Type="SchoolTrackerModel.Store.Attendances" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
         <PropertyRef Name="SID" />
       </Principal>
-      <Dependent Role="Attendances">
+      <Dependent Role="Attendance">
         <PropertyRef Name="SID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Schedule_Course">
-    <End Role="Courses" Type="SchoolTrackerModel.Store.Courses" Multiplicity="1" />
-    <End Role="Schedules" Type="SchoolTrackerModel.Store.Schedules" Multiplicity="*" />
+    <End Role="Cours" Type="SchoolTrackerModel.Store.Courses" Multiplicity="1" />
+    <End Role="Schedule" Type="SchoolTrackerModel.Store.Schedules" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Courses">
+      <Principal Role="Cours">
         <PropertyRef Name="CID" />
       </Principal>
-      <Dependent Role="Schedules">
+      <Dependent Role="Schedule">
         <PropertyRef Name="CourseID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Login_Faculty">
-    <End Role="Faculties" Type="SchoolTrackerModel.Store.Faculties" Multiplicity="1" />
-    <End Role="Logins" Type="SchoolTrackerModel.Store.Logins" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Faculties">
-        <PropertyRef Name="FID" />
-      </Principal>
-      <Dependent Role="Logins">
-        <PropertyRef Name="FID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Schedule_Student">
-    <End Role="Students" Type="SchoolTrackerModel.Store.Students" Multiplicity="1" />
-    <End Role="Schedules" Type="SchoolTrackerModel.Store.Schedules" Multiplicity="*" />
+    <End Role="Student" Type="SchoolTrackerModel.Store.Students" Multiplicity="1" />
+    <End Role="Schedule" Type="SchoolTrackerModel.Store.Schedules" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Students">
+      <Principal Role="Student">
         <PropertyRef Name="SID" />
       </Principal>
-      <Dependent Role="Schedules">
+      <Dependent Role="Schedule">
         <PropertyRef Name="ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Courses_Faculties">
-    <End Role="Faculty" Type="SchoolTrackerModel.Store.Faculties" Multiplicity="0..1" />
+  <Association Name="FK_Courses_aspnet_Users">
+    <End Role="aspnet_Users" Type="SchoolTrackerModel.Store.aspnet_Users" Multiplicity="1" />
     <End Role="Cours" Type="SchoolTrackerModel.Store.Courses" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Faculty">
-        <PropertyRef Name="FID" />
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
       </Principal>
       <Dependent Role="Cours">
         <PropertyRef Name="FID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aspnet_UsersInRoles_aspnet_Roles">
+    <End Role="aspnet_Roles" Type="SchoolTrackerModel.Store.aspnet_Roles" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="SchoolTrackerModel.Store.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="aspnet_Roles_RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aspnet_UsersInRoles_aspnet_Users">
+    <End Role="aspnet_UsersInRoles" Type="SchoolTrackerModel.Store.aspnet_UsersInRoles" Multiplicity="*" />
+    <End Role="aspnet_Users" Type="SchoolTrackerModel.Store.aspnet_Users" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="aspnet_Users_UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserRoles_AspNetRole">
+    <End Role="AspNetRole" Type="SchoolTrackerModel.Store.AspNetRoles" Multiplicity="1" />
+    <End Role="AspNetUserRoles" Type="SchoolTrackerModel.Store.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="AspNetRoles_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserRoles_AspNetUser">
+    <End Role="AspNetUserRoles" Type="SchoolTrackerModel.Store.AspNetUserRoles" Multiplicity="*" />
+    <End Role="AspNetUser" Type="SchoolTrackerModel.Store.AspNetUsers" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="AspNetUsers_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -159,175 +581,2008 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SchoolTrackerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SchoolTrackerEntities1" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="aspnet_AnyDataInTables" ReturnType="Collection(String)">
+            <Parameter Name="TablesToCheck" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Applications_CreateApplication">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ApplicationId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_CheckSchemaVersion">
+            <Parameter Name="Feature" Mode="In" Type="String" />
+            <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_ChangePasswordQuestionAndAnswer">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="NewPasswordQuestion" Mode="In" Type="String" />
+            <Parameter Name="NewPasswordAnswer" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_CreateUser">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="PasswordQuestion" Mode="In" Type="String" />
+            <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+            <Parameter Name="IsApproved" Mode="In" Type="Boolean" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="CreateDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UniqueEmail" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+            <Parameter Name="UserId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_FindUsersByEmail">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="EmailToMatch" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_FindUsersByName">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetAllUsers">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetNumberOfUsersOnline">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="MinutesSinceLastInActive" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetPassword" ReturnType="Collection(SchoolTrackerModel.aspnet_Membership_GetPassword_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetPasswordWithFormat" ReturnType="Collection(SchoolTrackerModel.aspnet_Membership_GetPasswordWithFormat_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="UpdateLastLoginActivityDate" Mode="In" Type="Boolean" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetUserByEmail" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetUserByName" ReturnType="Collection(SchoolTrackerModel.aspnet_Membership_GetUserByName_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="UpdateLastActivity" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetUserByUserId" ReturnType="Collection(SchoolTrackerModel.aspnet_Membership_GetUserByUserId_Result)">
+            <Parameter Name="UserId" Mode="In" Type="Guid" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="UpdateLastActivity" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_ResetPassword">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="NewPassword" Mode="In" Type="String" />
+            <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_SetPassword">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="NewPassword" Mode="In" Type="String" />
+            <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_UnlockUser">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_UpdateUser">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Comment" Mode="In" Type="String" />
+            <Parameter Name="IsApproved" Mode="In" Type="Boolean" />
+            <Parameter Name="LastLoginDate" Mode="In" Type="DateTime" />
+            <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UniqueEmail" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_UpdateUserInfo">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="IsPasswordCorrect" Mode="In" Type="Boolean" />
+            <Parameter Name="UpdateLastLoginActivityDate" Mode="In" Type="Boolean" />
+            <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="LastLoginDate" Mode="In" Type="DateTime" />
+            <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Paths_CreatePath">
+            <Parameter Name="ApplicationId" Mode="In" Type="Guid" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="PathId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Personalization_GetApplicationId">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ApplicationId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_DeleteAllState">
+            <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_FindState">
+            <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_GetCountOfState">
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+            <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_ResetSharedState">
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_ResetUserState">
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAllUsers_GetPageSettings" ReturnType="Collection(Binary)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAllUsers_ResetPageSettings">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAllUsers_SetPageSettings">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="PageSettings" Mode="In" Type="Binary" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationPerUser_GetPageSettings" ReturnType="Collection(Binary)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationPerUser_ResetPageSettings">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationPerUser_SetPageSettings">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="PageSettings" Mode="In" Type="Binary" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_DeleteInactiveProfiles" ReturnType="Collection(Int32)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_DeleteProfiles" ReturnType="Collection(Int32)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNames" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_GetNumberOfInactiveProfiles" ReturnType="Collection(Int32)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_GetProfiles">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_GetProperties" ReturnType="Collection(SchoolTrackerModel.aspnet_Profile_GetProperties_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_SetProperties">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="PropertyNames" Mode="In" Type="String" />
+            <Parameter Name="PropertyValuesString" Mode="In" Type="String" />
+            <Parameter Name="PropertyValuesBinary" Mode="In" Type="Binary" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="IsUserAnonymous" Mode="In" Type="Boolean" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_RegisterSchemaVersion">
+            <Parameter Name="Feature" Mode="In" Type="String" />
+            <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+            <Parameter Name="IsCurrentVersion" Mode="In" Type="Boolean" />
+            <Parameter Name="RemoveIncompatibleSchema" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_CreateRole">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_DeleteRole">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+            <Parameter Name="DeleteOnlyIfRoleIsEmpty" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_GetAllRoles" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_RoleExists">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Setup_RemoveAllRoleMembers">
+            <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Setup_RestorePermissions">
+            <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UnRegisterSchemaVersion">
+            <Parameter Name="Feature" Mode="In" Type="String" />
+            <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Users_CreateUser">
+            <Parameter Name="ApplicationId" Mode="In" Type="Guid" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="IsUserAnonymous" Mode="In" Type="Boolean" />
+            <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UserId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Users_DeleteUser">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="TablesToDeleteFrom" Mode="In" Type="Int32" />
+            <Parameter Name="NumTablesDeletedFrom" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_AddUsersToRoles" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNames" Mode="In" Type="String" />
+            <Parameter Name="RoleNames" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_FindUsersInRole" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+            <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_GetRolesForUser" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_GetUsersInRoles" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_IsUserInRole">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_RemoveUsersFromRoles" ReturnType="Collection(SchoolTrackerModel.aspnet_UsersInRoles_RemoveUsersFromRoles_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNames" Mode="In" Type="String" />
+            <Parameter Name="RoleNames" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_WebEvent_LogEvent">
+            <Parameter Name="EventId" Mode="In" Type="String" />
+            <Parameter Name="EventTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="EventTime" Mode="In" Type="DateTime" />
+            <Parameter Name="EventType" Mode="In" Type="String" />
+            <Parameter Name="EventSequence" Mode="In" Type="Decimal" />
+            <Parameter Name="EventOccurrence" Mode="In" Type="Decimal" />
+            <Parameter Name="EventCode" Mode="In" Type="Int32" />
+            <Parameter Name="EventDetailCode" Mode="In" Type="Int32" />
+            <Parameter Name="Message" Mode="In" Type="String" />
+            <Parameter Name="ApplicationPath" Mode="In" Type="String" />
+            <Parameter Name="ApplicationVirtualPath" Mode="In" Type="String" />
+            <Parameter Name="MachineName" Mode="In" Type="String" />
+            <Parameter Name="RequestUrl" Mode="In" Type="String" />
+            <Parameter Name="ExceptionType" Mode="In" Type="String" />
+            <Parameter Name="Details" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(SchoolTrackerModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(SchoolTrackerModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="aspnet_AnyDataInTables1" ReturnType="Collection(String)">
+            <Parameter Name="TablesToCheck" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Applications_CreateApplication1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ApplicationId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_CheckSchemaVersion1">
+            <Parameter Name="Feature" Mode="In" Type="String" />
+            <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_ChangePasswordQuestionAndAnswer1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="NewPasswordQuestion" Mode="In" Type="String" />
+            <Parameter Name="NewPasswordAnswer" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_CreateUser1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="PasswordQuestion" Mode="In" Type="String" />
+            <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+            <Parameter Name="IsApproved" Mode="In" Type="Boolean" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="CreateDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UniqueEmail" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+            <Parameter Name="UserId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_FindUsersByEmail1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="EmailToMatch" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_FindUsersByName1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetAllUsers1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetNumberOfUsersOnline1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="MinutesSinceLastInActive" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetPassword1" ReturnType="Collection(SchoolTrackerModel.aspnet_Membership_GetPassword1_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetPasswordWithFormat1" ReturnType="Collection(SchoolTrackerModel.aspnet_Membership_GetPasswordWithFormat1_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="UpdateLastLoginActivityDate" Mode="In" Type="Boolean" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetUserByEmail1" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetUserByName1" ReturnType="Collection(SchoolTrackerModel.aspnet_Membership_GetUserByName1_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="UpdateLastActivity" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetUserByUserId1" ReturnType="Collection(SchoolTrackerModel.aspnet_Membership_GetUserByUserId1_Result)">
+            <Parameter Name="UserId" Mode="In" Type="Guid" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="UpdateLastActivity" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_ResetPassword1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="NewPassword" Mode="In" Type="String" />
+            <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_SetPassword1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="NewPassword" Mode="In" Type="String" />
+            <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_UnlockUser1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_UpdateUser1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Comment" Mode="In" Type="String" />
+            <Parameter Name="IsApproved" Mode="In" Type="Boolean" />
+            <Parameter Name="LastLoginDate" Mode="In" Type="DateTime" />
+            <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UniqueEmail" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_UpdateUserInfo1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="IsPasswordCorrect" Mode="In" Type="Boolean" />
+            <Parameter Name="UpdateLastLoginActivityDate" Mode="In" Type="Boolean" />
+            <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="LastLoginDate" Mode="In" Type="DateTime" />
+            <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Paths_CreatePath1">
+            <Parameter Name="ApplicationId" Mode="In" Type="Guid" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="PathId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Personalization_GetApplicationId1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ApplicationId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_DeleteAllState1">
+            <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_FindState1">
+            <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_GetCountOfState1">
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+            <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_ResetSharedState1">
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_ResetUserState1">
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAllUsers_GetPageSettings1" ReturnType="Collection(Binary)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAllUsers_ResetPageSettings1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAllUsers_SetPageSettings1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="PageSettings" Mode="In" Type="Binary" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationPerUser_GetPageSettings1" ReturnType="Collection(Binary)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationPerUser_ResetPageSettings1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationPerUser_SetPageSettings1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="PageSettings" Mode="In" Type="Binary" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_DeleteInactiveProfiles1" ReturnType="Collection(Int32)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_DeleteProfiles1" ReturnType="Collection(Int32)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNames" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_GetNumberOfInactiveProfiles1" ReturnType="Collection(Int32)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_GetProfiles1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_GetProperties1" ReturnType="Collection(SchoolTrackerModel.aspnet_Profile_GetProperties1_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_SetProperties1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="PropertyNames" Mode="In" Type="String" />
+            <Parameter Name="PropertyValuesString" Mode="In" Type="String" />
+            <Parameter Name="PropertyValuesBinary" Mode="In" Type="Binary" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="IsUserAnonymous" Mode="In" Type="Boolean" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_RegisterSchemaVersion1">
+            <Parameter Name="Feature" Mode="In" Type="String" />
+            <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+            <Parameter Name="IsCurrentVersion" Mode="In" Type="Boolean" />
+            <Parameter Name="RemoveIncompatibleSchema" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_CreateRole1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_DeleteRole1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+            <Parameter Name="DeleteOnlyIfRoleIsEmpty" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_GetAllRoles1" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_RoleExists1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Setup_RemoveAllRoleMembers1">
+            <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Setup_RestorePermissions1">
+            <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UnRegisterSchemaVersion1">
+            <Parameter Name="Feature" Mode="In" Type="String" />
+            <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Users_CreateUser1">
+            <Parameter Name="ApplicationId" Mode="In" Type="Guid" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="IsUserAnonymous" Mode="In" Type="Boolean" />
+            <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UserId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Users_DeleteUser1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="TablesToDeleteFrom" Mode="In" Type="Int32" />
+            <Parameter Name="NumTablesDeletedFrom" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_AddUsersToRoles1" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNames" Mode="In" Type="String" />
+            <Parameter Name="RoleNames" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_FindUsersInRole1" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+            <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_GetRolesForUser1" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_GetUsersInRoles1" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_IsUserInRole1">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_RemoveUsersFromRoles1" ReturnType="Collection(SchoolTrackerModel.aspnet_UsersInRoles_RemoveUsersFromRoles1_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNames" Mode="In" Type="String" />
+            <Parameter Name="RoleNames" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_WebEvent_LogEvent1">
+            <Parameter Name="EventId" Mode="In" Type="String" />
+            <Parameter Name="EventTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="EventTime" Mode="In" Type="DateTime" />
+            <Parameter Name="EventType" Mode="In" Type="String" />
+            <Parameter Name="EventSequence" Mode="In" Type="Decimal" />
+            <Parameter Name="EventOccurrence" Mode="In" Type="Decimal" />
+            <Parameter Name="EventCode" Mode="In" Type="Int32" />
+            <Parameter Name="EventDetailCode" Mode="In" Type="Int32" />
+            <Parameter Name="Message" Mode="In" Type="String" />
+            <Parameter Name="ApplicationPath" Mode="In" Type="String" />
+            <Parameter Name="ApplicationVirtualPath" Mode="In" Type="String" />
+            <Parameter Name="MachineName" Mode="In" Type="String" />
+            <Parameter Name="RequestUrl" Mode="In" Type="String" />
+            <Parameter Name="ExceptionType" Mode="In" Type="String" />
+            <Parameter Name="Details" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram1">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram1">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram1">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition1" ReturnType="Collection(SchoolTrackerModel.sp_helpdiagramdefinition1_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams1" ReturnType="Collection(SchoolTrackerModel.sp_helpdiagrams1_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram1">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams1" />
+          <EntitySet Name="C__MigrationHistory" EntityType="SchoolTrackerModel.C__MigrationHistory" />
+          <EntitySet Name="aspnet_Applications" EntityType="SchoolTrackerModel.aspnet_Applications" />
+          <EntitySet Name="aspnet_Membership" EntityType="SchoolTrackerModel.aspnet_Membership" />
+          <EntitySet Name="aspnet_Paths" EntityType="SchoolTrackerModel.aspnet_Paths" />
+          <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="SchoolTrackerModel.aspnet_PersonalizationAllUsers" />
+          <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="SchoolTrackerModel.aspnet_PersonalizationPerUser" />
+          <EntitySet Name="aspnet_Profile" EntityType="SchoolTrackerModel.aspnet_Profile" />
+          <EntitySet Name="aspnet_Roles" EntityType="SchoolTrackerModel.aspnet_Roles" />
+          <EntitySet Name="aspnet_SchemaVersions" EntityType="SchoolTrackerModel.aspnet_SchemaVersions" />
+          <EntitySet Name="aspnet_Users" EntityType="SchoolTrackerModel.aspnet_Users" />
+          <EntitySet Name="aspnet_WebEvent_Events" EntityType="SchoolTrackerModel.aspnet_WebEvent_Events" />
+          <EntitySet Name="AspNetRoles" EntityType="SchoolTrackerModel.AspNetRole" />
+          <EntitySet Name="AspNetUserClaims" EntityType="SchoolTrackerModel.AspNetUserClaim" />
+          <EntitySet Name="AspNetUserLogins" EntityType="SchoolTrackerModel.AspNetUserLogin" />
+          <EntitySet Name="AspNetUsers" EntityType="SchoolTrackerModel.AspNetUser" />
+          <EntitySet Name="Attendances" EntityType="SchoolTrackerModel.Attendance" />
+          <EntitySet Name="Courses" EntityType="SchoolTrackerModel.Cours" />
+          <EntitySet Name="Schedules" EntityType="SchoolTrackerModel.Schedule" />
+          <EntitySet Name="Students" EntityType="SchoolTrackerModel.Student" />
+          <EntitySet Name="sysdiagrams" EntityType="SchoolTrackerModel.sysdiagram" />
+          <AssociationSet Name="FK__aspnet_Me__Appli__06CD04F7" Association="SchoolTrackerModel.FK__aspnet_Me__Appli__06CD04F7">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pa__Appli__3864608B" Association="SchoolTrackerModel.FK__aspnet_Pa__Appli__3864608B">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Ro__Appli__25518C17" Association="SchoolTrackerModel.FK__aspnet_Ro__Appli__25518C17">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Us__Appli__76969D2E" Association="SchoolTrackerModel.FK__aspnet_Us__Appli__76969D2E">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Me__UserI__07C12930" Association="SchoolTrackerModel.FK__aspnet_Me__UserI__07C12930">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__PathI__3E1D39E1" Association="SchoolTrackerModel.FK__aspnet_Pe__PathI__3E1D39E1">
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+            <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__PathI__41EDCAC5" Association="SchoolTrackerModel.FK__aspnet_Pe__PathI__41EDCAC5">
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+            <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__UserI__42E1EEFE" Association="SchoolTrackerModel.FK__aspnet_Pe__UserI__42E1EEFE">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pr__UserI__1BC821DD" Association="SchoolTrackerModel.FK__aspnet_Pr__UserI__1BC821DD">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="SchoolTrackerModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="SchoolTrackerModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Attendances_Students" Association="SchoolTrackerModel.FK_Attendances_Students">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Attendance" EntitySet="Attendances" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Schedule_Course" Association="SchoolTrackerModel.FK_Schedule_Course">
+            <End Role="Cours" EntitySet="Courses" />
+            <End Role="Schedule" EntitySet="Schedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Schedule_Student" Association="SchoolTrackerModel.FK_Schedule_Student">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Schedule" EntitySet="Schedules" />
+          </AssociationSet>
+          <AssociationSet Name="aspnet_UsersInRoles" Association="SchoolTrackerModel.aspnet_UsersInRoles">
+            <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="SchoolTrackerModel.AspNetUserRoles">
+            <End Role="AspNetRole" EntitySet="AspNetRoles" />
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <FunctionImport Name="aspnet_AnyDataInTables2" ReturnType="Collection(String)">
+          <Parameter Name="TablesToCheck" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Applications_CreateApplication2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ApplicationId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_CheckSchemaVersion2">
+            <Parameter Name="Feature" Mode="In" Type="String" />
+            <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_ChangePasswordQuestionAndAnswer2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="NewPasswordQuestion" Mode="In" Type="String" />
+            <Parameter Name="NewPasswordAnswer" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_CreateUser2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="PasswordQuestion" Mode="In" Type="String" />
+            <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+            <Parameter Name="IsApproved" Mode="In" Type="Boolean" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="CreateDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UniqueEmail" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+            <Parameter Name="UserId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_FindUsersByEmail2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="EmailToMatch" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_FindUsersByName2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetAllUsers2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetNumberOfUsersOnline2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="MinutesSinceLastInActive" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetPassword2" ReturnType="Collection(SchoolTrackerModel.aspnet_Membership_GetPassword2_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetPasswordWithFormat2" ReturnType="Collection(SchoolTrackerModel.aspnet_Membership_GetPasswordWithFormat2_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="UpdateLastLoginActivityDate" Mode="In" Type="Boolean" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetUserByEmail2" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetUserByName2" ReturnType="Collection(SchoolTrackerModel.aspnet_Membership_GetUserByName2_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="UpdateLastActivity" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_GetUserByUserId2" ReturnType="Collection(SchoolTrackerModel.aspnet_Membership_GetUserByUserId2_Result)">
+            <Parameter Name="UserId" Mode="In" Type="Guid" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="UpdateLastActivity" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_ResetPassword2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="NewPassword" Mode="In" Type="String" />
+            <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_SetPassword2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="NewPassword" Mode="In" Type="String" />
+            <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_UnlockUser2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_UpdateUser2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Comment" Mode="In" Type="String" />
+            <Parameter Name="IsApproved" Mode="In" Type="Boolean" />
+            <Parameter Name="LastLoginDate" Mode="In" Type="DateTime" />
+            <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UniqueEmail" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Membership_UpdateUserInfo2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="IsPasswordCorrect" Mode="In" Type="Boolean" />
+            <Parameter Name="UpdateLastLoginActivityDate" Mode="In" Type="Boolean" />
+            <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+            <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="LastLoginDate" Mode="In" Type="DateTime" />
+            <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Paths_CreatePath2">
+            <Parameter Name="ApplicationId" Mode="In" Type="Guid" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="PathId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Personalization_GetApplicationId2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ApplicationId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_DeleteAllState2">
+            <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_FindState2">
+            <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_GetCountOfState2">
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+            <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_ResetSharedState2">
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAdministration_ResetUserState2">
+            <Parameter Name="Count" Mode="InOut" Type="Int32" />
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAllUsers_GetPageSettings2" ReturnType="Collection(Binary)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAllUsers_ResetPageSettings2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationAllUsers_SetPageSettings2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="PageSettings" Mode="In" Type="Binary" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationPerUser_GetPageSettings2" ReturnType="Collection(Binary)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationPerUser_ResetPageSettings2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_PersonalizationPerUser_SetPageSettings2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="PageSettings" Mode="In" Type="Binary" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_DeleteInactiveProfiles2" ReturnType="Collection(Int32)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_DeleteProfiles2" ReturnType="Collection(Int32)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNames" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_GetNumberOfInactiveProfiles2" ReturnType="Collection(Int32)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_GetProfiles2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+            <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_GetProperties2" ReturnType="Collection(SchoolTrackerModel.aspnet_Profile_GetProperties2_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Profile_SetProperties2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="PropertyNames" Mode="In" Type="String" />
+            <Parameter Name="PropertyValuesString" Mode="In" Type="String" />
+            <Parameter Name="PropertyValuesBinary" Mode="In" Type="Binary" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="IsUserAnonymous" Mode="In" Type="Boolean" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_RegisterSchemaVersion2">
+            <Parameter Name="Feature" Mode="In" Type="String" />
+            <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+            <Parameter Name="IsCurrentVersion" Mode="In" Type="Boolean" />
+            <Parameter Name="RemoveIncompatibleSchema" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_CreateRole2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_DeleteRole2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+            <Parameter Name="DeleteOnlyIfRoleIsEmpty" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_GetAllRoles2" ReturnType="Collection(String)">
+          <Parameter Name="ApplicationName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Roles_RoleExists2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Setup_RemoveAllRoleMembers2">
+          <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Setup_RestorePermissions2">
+          <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UnRegisterSchemaVersion2">
+            <Parameter Name="Feature" Mode="In" Type="String" />
+            <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Users_CreateUser2">
+            <Parameter Name="ApplicationId" Mode="In" Type="Guid" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="IsUserAnonymous" Mode="In" Type="Boolean" />
+            <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UserId" Mode="InOut" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_Users_DeleteUser2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="TablesToDeleteFrom" Mode="In" Type="Int32" />
+            <Parameter Name="NumTablesDeletedFrom" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_AddUsersToRoles2" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNames" Mode="In" Type="String" />
+            <Parameter Name="RoleNames" Mode="In" Type="String" />
+            <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_FindUsersInRole2" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+            <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_GetRolesForUser2" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_GetUsersInRoles2" ReturnType="Collection(String)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_IsUserInRole2">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="RoleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_UsersInRoles_RemoveUsersFromRoles2" ReturnType="Collection(SchoolTrackerModel.aspnet_UsersInRoles_RemoveUsersFromRoles2_Result)">
+            <Parameter Name="ApplicationName" Mode="In" Type="String" />
+            <Parameter Name="UserNames" Mode="In" Type="String" />
+            <Parameter Name="RoleNames" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="aspnet_WebEvent_LogEvent2">
+            <Parameter Name="EventId" Mode="In" Type="String" />
+            <Parameter Name="EventTimeUtc" Mode="In" Type="DateTime" />
+            <Parameter Name="EventTime" Mode="In" Type="DateTime" />
+            <Parameter Name="EventType" Mode="In" Type="String" />
+            <Parameter Name="EventSequence" Mode="In" Type="Decimal" />
+            <Parameter Name="EventOccurrence" Mode="In" Type="Decimal" />
+            <Parameter Name="EventCode" Mode="In" Type="Int32" />
+            <Parameter Name="EventDetailCode" Mode="In" Type="Int32" />
+            <Parameter Name="Message" Mode="In" Type="String" />
+            <Parameter Name="ApplicationPath" Mode="In" Type="String" />
+            <Parameter Name="ApplicationVirtualPath" Mode="In" Type="String" />
+            <Parameter Name="MachineName" Mode="In" Type="String" />
+            <Parameter Name="RequestUrl" Mode="In" Type="String" />
+            <Parameter Name="ExceptionType" Mode="In" Type="String" />
+            <Parameter Name="Details" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram2">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram2">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram2">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition2" ReturnType="Collection(SchoolTrackerModel.sp_helpdiagramdefinition2_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams2" ReturnType="Collection(SchoolTrackerModel.sp_helpdiagrams2_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram2">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams2" />
+          <AssociationSet Name="FK_Courses_aspnet_Users" Association="SchoolTrackerModel.FK_Courses_aspnet_Users">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="Cours" EntitySet="Courses" />
+          </AssociationSet>
+          </EntityContainer>
+        <ComplexType Name="aspnet_Membership_GetPassword_Result">
+          <Property Type="String" Name="Column1" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="Column2" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Membership_GetPasswordWithFormat_Result">
+          <Property Type="String" Name="Column1" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="Column2" Nullable="true" />
+          <Property Type="String" Name="Column3" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="Column4" Nullable="true" />
+          <Property Type="Int32" Name="Column5" Nullable="true" />
+          <Property Type="Boolean" Name="Column6" Nullable="true" />
+          <Property Type="DateTime" Name="Column7" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Column8" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Membership_GetUserByName_Result">
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="PasswordQuestion" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="Comment" Nullable="true" MaxLength="Max" />
+          <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastLoginDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastPasswordChangedDate" Nullable="false" Precision="23" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+          <Property Type="DateTime" Name="LastLockoutDate" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Membership_GetUserByUserId_Result">
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="PasswordQuestion" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="Comment" Nullable="true" MaxLength="Max" />
+          <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastLoginDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastPasswordChangedDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" />
+          <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+          <Property Type="DateTime" Name="LastLockoutDate" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Profile_GetProperties_Result">
+          <Property Type="String" Name="PropertyNames" Nullable="false" MaxLength="Max" />
+          <Property Type="String" Name="PropertyValuesString" Nullable="false" MaxLength="Max" />
+          <Property Type="Binary" Name="PropertyValuesBinary" Nullable="false" MaxLength="Max" />
+        </ComplexType>
+        <ComplexType Name="aspnet_UsersInRoles_RemoveUsersFromRoles_Result">
+          <Property Type="String" Name="Column1" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Membership_GetPassword1_Result">
+          <Property Type="String" Name="Column1" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="Column2" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Membership_GetPasswordWithFormat1_Result">
+          <Property Type="String" Name="Column1" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="Column2" Nullable="true" />
+          <Property Type="String" Name="Column3" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="Column4" Nullable="true" />
+          <Property Type="Int32" Name="Column5" Nullable="true" />
+          <Property Type="Boolean" Name="Column6" Nullable="true" />
+          <Property Type="DateTime" Name="Column7" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Column8" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Membership_GetUserByName1_Result">
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="PasswordQuestion" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="Comment" Nullable="true" MaxLength="Max" />
+          <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastLoginDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastPasswordChangedDate" Nullable="false" Precision="23" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+          <Property Type="DateTime" Name="LastLockoutDate" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Membership_GetUserByUserId1_Result">
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="PasswordQuestion" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="Comment" Nullable="true" MaxLength="Max" />
+          <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastLoginDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastPasswordChangedDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" />
+          <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+          <Property Type="DateTime" Name="LastLockoutDate" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Profile_GetProperties1_Result">
+          <Property Type="String" Name="PropertyNames" Nullable="false" MaxLength="Max" />
+          <Property Type="String" Name="PropertyValuesString" Nullable="false" MaxLength="Max" />
+          <Property Type="Binary" Name="PropertyValuesBinary" Nullable="false" MaxLength="Max" />
+        </ComplexType>
+        <ComplexType Name="aspnet_UsersInRoles_RemoveUsersFromRoles1_Result">
+          <Property Type="String" Name="Column1" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition1_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams1_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="aspnet_Applications">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="ApplicationName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LoweredApplicationName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="aspnet_Membership" Relationship="SchoolTrackerModel.FK__aspnet_Me__Appli__06CD04F7" FromRole="aspnet_Applications" ToRole="aspnet_Membership" />
+          <NavigationProperty Name="aspnet_Paths" Relationship="SchoolTrackerModel.FK__aspnet_Pa__Appli__3864608B" FromRole="aspnet_Applications" ToRole="aspnet_Paths" />
+          <NavigationProperty Name="aspnet_Roles" Relationship="SchoolTrackerModel.FK__aspnet_Ro__Appli__25518C17" FromRole="aspnet_Applications" ToRole="aspnet_Roles" />
+          <NavigationProperty Name="aspnet_Users" Relationship="SchoolTrackerModel.FK__aspnet_Us__Appli__76969D2E" FromRole="aspnet_Applications" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Membership">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+          <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MobilePIN" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LoweredEmail" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordQuestion" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordAnswer" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+          <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastLoginDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+          <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="SchoolTrackerModel.FK__aspnet_Me__Appli__06CD04F7" FromRole="aspnet_Membership" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_Users" Relationship="SchoolTrackerModel.FK__aspnet_Me__UserI__07C12930" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Paths">
+          <Key>
+            <PropertyRef Name="PathId" />
+          </Key>
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="PathId" Type="Guid" Nullable="false" />
+          <Property Name="Path" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LoweredPath" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="SchoolTrackerModel.FK__aspnet_Pa__Appli__3864608B" FromRole="aspnet_Paths" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_PersonalizationAllUsers" Relationship="SchoolTrackerModel.FK__aspnet_Pe__PathI__3E1D39E1" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationAllUsers" />
+          <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="SchoolTrackerModel.FK__aspnet_Pe__PathI__41EDCAC5" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationPerUser" />
+        </EntityType>
+        <EntityType Name="aspnet_PersonalizationAllUsers">
+          <Key>
+            <PropertyRef Name="PathId" />
+          </Key>
+          <Property Name="PathId" Type="Guid" Nullable="false" />
+          <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="aspnet_Paths" Relationship="SchoolTrackerModel.FK__aspnet_Pe__PathI__3E1D39E1" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
+        </EntityType>
+        <EntityType Name="aspnet_PersonalizationPerUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="PathId" Type="Guid" />
+          <Property Name="UserId" Type="Guid" />
+          <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="aspnet_Paths" Relationship="SchoolTrackerModel.FK__aspnet_Pe__PathI__41EDCAC5" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Paths" />
+          <NavigationProperty Name="aspnet_Users" Relationship="SchoolTrackerModel.FK__aspnet_Pe__UserI__42E1EEFE" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Profile">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="PropertyNames" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyValuesString" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyValuesBinary" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="aspnet_Users" Relationship="SchoolTrackerModel.FK__aspnet_Pr__UserI__1BC821DD" FromRole="aspnet_Profile" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="RoleId" Type="Guid" Nullable="false" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LoweredRoleName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="SchoolTrackerModel.FK__aspnet_Ro__Appli__25518C17" FromRole="aspnet_Roles" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_Users" Relationship="SchoolTrackerModel.aspnet_UsersInRoles" FromRole="aspnet_Roles" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_SchemaVersions">
+          <Key>
+            <PropertyRef Name="Feature" />
+            <PropertyRef Name="CompatibleSchemaVersion" />
+          </Key>
+          <Property Name="Feature" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CompatibleSchemaVersion" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="IsCurrentVersion" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="MobileAlias" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+          <Property Name="LastActivityDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="SchoolTrackerModel.FK__aspnet_Us__Appli__76969D2E" FromRole="aspnet_Users" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_Membership" Relationship="SchoolTrackerModel.FK__aspnet_Me__UserI__07C12930" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
+          <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="SchoolTrackerModel.FK__aspnet_Pe__UserI__42E1EEFE" FromRole="aspnet_Users" ToRole="aspnet_PersonalizationPerUser" />
+          <NavigationProperty Name="aspnet_Profile" Relationship="SchoolTrackerModel.FK__aspnet_Pr__UserI__1BC821DD" FromRole="aspnet_Users" ToRole="aspnet_Profile" />
+          <NavigationProperty Name="aspnet_Roles" Relationship="SchoolTrackerModel.aspnet_UsersInRoles" FromRole="aspnet_Users" ToRole="aspnet_Roles" />
+          <NavigationProperty Name="Courses" Relationship="SchoolTrackerModel.FK_Courses_aspnet_Users" FromRole="aspnet_Users" ToRole="Cours" />
+        </EntityType>
+        <EntityType Name="aspnet_WebEvent_Events">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Name="EventId" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="EventTimeUtc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EventTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EventType" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EventSequence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+          <Property Name="EventOccurrence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+          <Property Name="EventCode" Type="Int32" Nullable="false" />
+          <Property Name="EventDetailCode" Type="Int32" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationPath" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationVirtualPath" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="MachineName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="RequestUrl" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="ExceptionType" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AspNetRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="SchoolTrackerModel.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="SchoolTrackerModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogin">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="SchoolTrackerModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="SchoolTrackerModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="SchoolTrackerModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
+          <NavigationProperty Name="AspNetRoles" Relationship="SchoolTrackerModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+        </EntityType>
         <EntityType Name="Attendance">
           <Key>
-            <PropertyRef Name="SID" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="SID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Clock_In" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Clock_Out" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Student" Relationship="Self.FK_Attendances_Students" FromRole="Attendances" ToRole="Students" />
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Student" Relationship="SchoolTrackerModel.FK_Attendances_Students" FromRole="Attendance" ToRole="Student" />
         </EntityType>
         <EntityType Name="Cours">
           <Key>
             <PropertyRef Name="CID" />
           </Key>
-          <Property Name="CID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CourseName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CourseName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TimeStart" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="TimeEnd" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Schedules" Relationship="Self.FK_Schedule_Course" FromRole="Courses" ToRole="Schedules" />
-          <Property Name="FID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Faculty" Relationship="SchoolTrackerModel.FK_Courses_Faculties" FromRole="Cours" ToRole="Faculty" />
-        </EntityType>
-        <EntityType Name="Faculty">
-          <Key>
-            <PropertyRef Name="FID" />
-          </Key>
-          <Property Name="FID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Fac_Fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Fac_Lname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="AccessLvl" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Login" Relationship="Self.FK_Login_Faculty" FromRole="Faculties" ToRole="Logins" />
-          <NavigationProperty Name="Courses" Relationship="SchoolTrackerModel.FK_Courses_Faculties" FromRole="Faculty" ToRole="Cours" />
-        </EntityType>
-        <EntityType Name="Login">
-          <Key>
-            <PropertyRef Name="FID" />
-          </Key>
-          <Property Name="FID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Faculty" Relationship="Self.FK_Login_Faculty" FromRole="Logins" ToRole="Faculties" />
+          <Property Name="FID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Schedules" Relationship="SchoolTrackerModel.FK_Schedule_Course" FromRole="Cours" ToRole="Schedule" />
+          <NavigationProperty Name="aspnet_Users" Relationship="SchoolTrackerModel.FK_Courses_aspnet_Users" FromRole="Cours" ToRole="aspnet_Users" />
         </EntityType>
         <EntityType Name="Schedule">
           <Key>
-            <PropertyRef Name="ID" />
-            <PropertyRef Name="CourseID" />
+            <PropertyRef Name="ScheduleID" />
           </Key>
-          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CourseID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Cours" Relationship="Self.FK_Schedule_Course" FromRole="Schedules" ToRole="Courses" />
-          <NavigationProperty Name="Student" Relationship="Self.FK_Schedule_Student" FromRole="Schedules" ToRole="Students" />
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CourseID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ScheduleID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cours" Relationship="SchoolTrackerModel.FK_Schedule_Course" FromRole="Schedule" ToRole="Cours" />
+          <NavigationProperty Name="Student" Relationship="SchoolTrackerModel.FK_Schedule_Student" FromRole="Schedule" ToRole="Student" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
             <PropertyRef Name="SID" />
           </Key>
-          <Property Name="SID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Lname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Attendance" Relationship="Self.FK_Attendances_Students" FromRole="Students" ToRole="Attendances" />
-          <NavigationProperty Name="Schedules" Relationship="Self.FK_Schedule_Student" FromRole="Students" ToRole="Schedules" />
+          <Property Name="SID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Attendances" Relationship="SchoolTrackerModel.FK_Attendances_Students" FromRole="Student" ToRole="Attendance" />
+          <NavigationProperty Name="Schedules" Relationship="SchoolTrackerModel.FK_Schedule_Student" FromRole="Student" ToRole="Schedule" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
             <PropertyRef Name="diagram_id" />
           </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
           <Property Name="principal_id" Type="Int32" Nullable="false" />
           <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <Association Name="FK_Attendances_Students">
-          <End Role="Students" Type="Self.Student" Multiplicity="1" />
-          <End Role="Attendances" Type="Self.Attendance" Multiplicity="0..1" />
+        <Association Name="FK__aspnet_Me__Appli__06CD04F7">
+          <End Type="SchoolTrackerModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+          <End Type="SchoolTrackerModel.aspnet_Membership" Role="aspnet_Membership" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Students">
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Membership">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pa__Appli__3864608B">
+          <End Type="SchoolTrackerModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+          <End Type="SchoolTrackerModel.aspnet_Paths" Role="aspnet_Paths" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Paths">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Ro__Appli__25518C17">
+          <End Type="SchoolTrackerModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+          <End Type="SchoolTrackerModel.aspnet_Roles" Role="aspnet_Roles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Roles">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Us__Appli__76969D2E">
+          <End Type="SchoolTrackerModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+          <End Type="SchoolTrackerModel.aspnet_Users" Role="aspnet_Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Users">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Me__UserI__07C12930">
+          <End Type="SchoolTrackerModel.aspnet_Users" Role="aspnet_Users" Multiplicity="1" />
+          <End Type="SchoolTrackerModel.aspnet_Membership" Role="aspnet_Membership" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_Membership">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__PathI__3E1D39E1">
+          <End Type="SchoolTrackerModel.aspnet_Paths" Role="aspnet_Paths" Multiplicity="1" />
+          <End Type="SchoolTrackerModel.aspnet_PersonalizationAllUsers" Role="aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Paths">
+              <PropertyRef Name="PathId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationAllUsers">
+              <PropertyRef Name="PathId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__PathI__41EDCAC5">
+          <End Type="SchoolTrackerModel.aspnet_Paths" Role="aspnet_Paths" Multiplicity="0..1" />
+          <End Type="SchoolTrackerModel.aspnet_PersonalizationPerUser" Role="aspnet_PersonalizationPerUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Paths">
+              <PropertyRef Name="PathId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationPerUser">
+              <PropertyRef Name="PathId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__UserI__42E1EEFE">
+          <End Type="SchoolTrackerModel.aspnet_Users" Role="aspnet_Users" Multiplicity="0..1" />
+          <End Type="SchoolTrackerModel.aspnet_PersonalizationPerUser" Role="aspnet_PersonalizationPerUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationPerUser">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pr__UserI__1BC821DD">
+          <End Type="SchoolTrackerModel.aspnet_Users" Role="aspnet_Users" Multiplicity="1" />
+          <End Type="SchoolTrackerModel.aspnet_Profile" Role="aspnet_Profile" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_Profile">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Type="SchoolTrackerModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SchoolTrackerModel.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaim">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Type="SchoolTrackerModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SchoolTrackerModel.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogin">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Attendances_Students">
+          <End Type="SchoolTrackerModel.Student" Role="Student" Multiplicity="1" />
+          <End Type="SchoolTrackerModel.Attendance" Role="Attendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
               <PropertyRef Name="SID" />
             </Principal>
-            <Dependent Role="Attendances">
+            <Dependent Role="Attendance">
               <PropertyRef Name="SID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Schedule_Course">
-          <End Role="Courses" Type="Self.Cours" Multiplicity="1" />
-          <End Role="Schedules" Type="Self.Schedule" Multiplicity="*" />
+          <End Type="SchoolTrackerModel.Cours" Role="Cours" Multiplicity="1" />
+          <End Type="SchoolTrackerModel.Schedule" Role="Schedule" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Courses">
+            <Principal Role="Cours">
               <PropertyRef Name="CID" />
             </Principal>
-            <Dependent Role="Schedules">
+            <Dependent Role="Schedule">
               <PropertyRef Name="CourseID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Login_Faculty">
-          <End Role="Faculties" Type="Self.Faculty" Multiplicity="1" />
-          <End Role="Logins" Type="Self.Login" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Faculties">
-              <PropertyRef Name="FID" />
-            </Principal>
-            <Dependent Role="Logins">
-              <PropertyRef Name="FID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Schedule_Student">
-          <End Role="Students" Type="Self.Student" Multiplicity="1" />
-          <End Role="Schedules" Type="Self.Schedule" Multiplicity="*" />
+          <End Type="SchoolTrackerModel.Student" Role="Student" Multiplicity="1" />
+          <End Type="SchoolTrackerModel.Schedule" Role="Schedule" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Students">
+            <Principal Role="Student">
               <PropertyRef Name="SID" />
             </Principal>
-            <Dependent Role="Schedules">
+            <Dependent Role="Schedule">
               <PropertyRef Name="ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="SchoolTrackerEntities1" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Attendances" EntityType="Self.Attendance" />
-          <EntitySet Name="Courses" EntityType="Self.Cours" />
-          <EntitySet Name="Faculties" EntityType="Self.Faculty" />
-          <EntitySet Name="Logins" EntityType="Self.Login" />
-          <EntitySet Name="Schedules" EntityType="Self.Schedule" />
-          <EntitySet Name="Students" EntityType="Self.Student" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-          <AssociationSet Name="FK_Attendances_Students" Association="Self.FK_Attendances_Students">
-            <End Role="Students" EntitySet="Students" />
-            <End Role="Attendances" EntitySet="Attendances" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Schedule_Course" Association="Self.FK_Schedule_Course">
-            <End Role="Courses" EntitySet="Courses" />
-            <End Role="Schedules" EntitySet="Schedules" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Login_Faculty" Association="Self.FK_Login_Faculty">
-            <End Role="Faculties" EntitySet="Faculties" />
-            <End Role="Logins" EntitySet="Logins" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Schedule_Student" Association="Self.FK_Schedule_Student">
-            <End Role="Students" EntitySet="Students" />
-            <End Role="Schedules" EntitySet="Schedules" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Courses_Faculties" Association="SchoolTrackerModel.FK_Courses_Faculties">
-            <End Role="Faculty" EntitySet="Faculties" />
-            <End Role="Cours" EntitySet="Courses" />
-          </AssociationSet>
-        </EntityContainer>
-        <Association Name="FK_Courses_Faculties">
-          <End Type="SchoolTrackerModel.Faculty" Role="Faculty" Multiplicity="0..1" />
+        <Association Name="aspnet_UsersInRoles">
+          <End Type="SchoolTrackerModel.aspnet_Roles" Role="aspnet_Roles" Multiplicity="*" />
+          <End Type="SchoolTrackerModel.aspnet_Users" Role="aspnet_Users" Multiplicity="*" />
+        </Association>
+        <Association Name="AspNetUserRoles">
+          <End Type="SchoolTrackerModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+          <End Type="SchoolTrackerModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+        </Association>
+        <ComplexType Name="aspnet_Membership_GetPassword2_Result">
+          <Property Type="String" Name="Column1" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="Column2" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Membership_GetPasswordWithFormat2_Result">
+          <Property Type="String" Name="Column1" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="Column2" Nullable="true" />
+          <Property Type="String" Name="Column3" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="Column4" Nullable="true" />
+          <Property Type="Int32" Name="Column5" Nullable="true" />
+          <Property Type="Boolean" Name="Column6" Nullable="true" />
+          <Property Type="DateTime" Name="Column7" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Column8" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Membership_GetUserByName2_Result">
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="PasswordQuestion" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="Comment" Nullable="true" MaxLength="Max" />
+          <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastLoginDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastPasswordChangedDate" Nullable="false" Precision="23" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+          <Property Type="DateTime" Name="LastLockoutDate" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Membership_GetUserByUserId2_Result">
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="PasswordQuestion" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="Comment" Nullable="true" MaxLength="Max" />
+          <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastLoginDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LastPasswordChangedDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" />
+          <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+          <Property Type="DateTime" Name="LastLockoutDate" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="aspnet_Profile_GetProperties2_Result">
+          <Property Type="String" Name="PropertyNames" Nullable="false" MaxLength="Max" />
+          <Property Type="String" Name="PropertyValuesString" Nullable="false" MaxLength="Max" />
+          <Property Type="Binary" Name="PropertyValuesBinary" Nullable="false" MaxLength="Max" />
+        </ComplexType>
+        <ComplexType Name="aspnet_UsersInRoles_RemoveUsersFromRoles2_Result">
+          <Property Type="String" Name="Column1" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition2_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams2_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <Association Name="FK_Courses_aspnet_Users">
+          <End Type="SchoolTrackerModel.aspnet_Users" Role="aspnet_Users" Multiplicity="1" />
           <End Type="SchoolTrackerModel.Cours" Role="Cours" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Faculty">
-              <PropertyRef Name="FID" />
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
             </Principal>
             <Dependent Role="Cours">
               <PropertyRef Name="FID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="SchoolTrackerModelStoreContainer" CdmEntityContainer="SchoolTrackerEntities1">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.C__MigrationHistory)">
+        <MappingFragment StoreEntitySet="C__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Applications">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_Applications)">
+        <MappingFragment StoreEntitySet="aspnet_Applications">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Membership">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_Membership)">
+        <MappingFragment StoreEntitySet="aspnet_Membership">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Paths">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_Paths)">
+        <MappingFragment StoreEntitySet="aspnet_Paths">
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationAllUsers">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_PersonalizationAllUsers)">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationAllUsers">
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationPerUser">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_PersonalizationPerUser)">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationPerUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Profile">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_Profile)">
+        <MappingFragment StoreEntitySet="aspnet_Profile">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+          <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+          <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Roles">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_Roles)">
+        <MappingFragment StoreEntitySet="aspnet_Roles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_SchemaVersions">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_SchemaVersions)">
+        <MappingFragment StoreEntitySet="aspnet_SchemaVersions">
+          <ScalarProperty Name="Feature" ColumnName="Feature" />
+          <ScalarProperty Name="CompatibleSchemaVersion" ColumnName="CompatibleSchemaVersion" />
+          <ScalarProperty Name="IsCurrentVersion" ColumnName="IsCurrentVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Users">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_Users)">
+        <MappingFragment StoreEntitySet="aspnet_Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_WebEvent_Events">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_WebEvent_Events)">
+        <MappingFragment StoreEntitySet="aspnet_WebEvent_Events">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="EventTimeUtc" ColumnName="EventTimeUtc" />
+          <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="EventSequence" ColumnName="EventSequence" />
+          <ScalarProperty Name="EventOccurrence" ColumnName="EventOccurrence" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="EventDetailCode" ColumnName="EventDetailCode" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="ApplicationPath" ColumnName="ApplicationPath" />
+          <ScalarProperty Name="ApplicationVirtualPath" ColumnName="ApplicationVirtualPath" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+          <ScalarProperty Name="ExceptionType" ColumnName="ExceptionType" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.AspNetRole)">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.AspNetUserClaim)">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.AspNetUserLogin)">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.AspNetUser)">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Attendances">
       <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.Attendance)">
         <MappingFragment StoreEntitySet="Attendances">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="SID" ColumnName="SID" />
           <ScalarProperty Name="Clock_In" ColumnName="Clock_In" />
           <ScalarProperty Name="Clock_Out" ColumnName="Clock_Out" />
@@ -346,27 +2601,10 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Faculties">
-      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.Faculty)">
-        <MappingFragment StoreEntitySet="Faculties">
-          <ScalarProperty Name="FID" ColumnName="FID" />
-          <ScalarProperty Name="Fac_Fname" ColumnName="Fac_Fname" />
-          <ScalarProperty Name="Fac_Lname" ColumnName="Fac_Lname" />
-          <ScalarProperty Name="AccessLvl" ColumnName="AccessLvl" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Logins">
-      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.Login)">
-        <MappingFragment StoreEntitySet="Logins">
-          <ScalarProperty Name="FID" ColumnName="FID" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Schedules">
       <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.Schedule)">
         <MappingFragment StoreEntitySet="Schedules">
+          <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="CourseID" ColumnName="CourseID" />
         </MappingFragment>
@@ -392,6 +2630,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <AssociationSetMapping Name="aspnet_UsersInRoles" TypeName="SchoolTrackerModel.aspnet_UsersInRoles" StoreEntitySet="aspnet_UsersInRoles">
+      <EndProperty Name="aspnet_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="aspnet_Roles_RoleId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_Users">
+        <ScalarProperty Name="UserId" ColumnName="aspnet_Users_UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="SchoolTrackerModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRole">
+        <ScalarProperty Name="Id" ColumnName="AspNetRoles_Id" />
+      </EndProperty>
+      <EndProperty Name="AspNetUser">
+        <ScalarProperty Name="Id" ColumnName="AspNetUsers_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>

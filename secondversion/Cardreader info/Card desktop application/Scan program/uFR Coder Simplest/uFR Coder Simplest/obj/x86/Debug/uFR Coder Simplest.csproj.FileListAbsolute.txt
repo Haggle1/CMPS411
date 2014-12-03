@@ -1,0 +1,60 @@
+D:\Moji Programi\C#\MifareProject\uFr Coder Simplest\uFR Coder Simplest\uFR Coder Simplest\bin\x86\Debug\uFR Coder Simplest.exe
+D:\Moji Programi\C#\MifareProject\uFr Coder Simplest\uFR Coder Simplest\uFR Coder Simplest\bin\x86\Debug\uFR Coder Simplest.pdb
+D:\Moji Programi\C#\MifareProject\uFr Coder Simplest\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Moji Programi\C#\MifareProject\uFr Coder Simplest\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR_Coder_Simplest.frmuFRCoderSimplest.resources
+D:\Moji Programi\C#\MifareProject\uFr Coder Simplest\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR_Coder_Simplest.Properties.Resources.resources
+D:\Moji Programi\C#\MifareProject\uFr Coder Simplest\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.csproj.GenerateResource.Cache
+D:\Moji Programi\C#\MifareProject\uFr Coder Simplest\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.exe
+D:\Moji Programi\C#\MifareProject\uFr Coder Simplest\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.pdb
+F:\RADNI FOLDER\C#\MifareProject\uFRCoder Simplest\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.exe
+F:\RADNI FOLDER\C#\MifareProject\uFRCoder Simplest\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.pdb
+F:\RADNI FOLDER\C#\MifareProject\uFRCoder Simplest\uFR Coder Simplest\uFR Coder Simplest\bin\x86\Debug\uFR Coder Simplest.exe
+F:\RADNI FOLDER\C#\MifareProject\uFRCoder Simplest\uFR Coder Simplest\uFR Coder Simplest\bin\x86\Debug\uFR Coder Simplest.pdb
+F:\RADNI FOLDER\C#\MifareProject\uFRCoder Simplest\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\RADNI FOLDER\C#\MifareProject\uFRCoder Simplest\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR_Coder_Simplest.frmuFRCoderSimplest.resources
+F:\RADNI FOLDER\C#\MifareProject\uFRCoder Simplest\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR_Coder_Simplest.Properties.Resources.resources
+F:\RADNI FOLDER\C#\MifareProject\uFRCoder Simplest\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\RADNI FOLDER\C#\MifareProject\uFRCoder Simplest\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\uFRNewRadniFolder\C#\MifareProject\uFRCoder Simplest1\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.exe
+F:\uFRNewRadniFolder\C#\MifareProject\uFRCoder Simplest1\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.pdb
+F:\uFRNewRadniFolder\C#\MifareProject\uFRCoder Simplest1\uFR Coder Simplest\uFR Coder Simplest\bin\x86\Debug\uFR Coder Simplest.exe
+F:\uFRNewRadniFolder\C#\MifareProject\uFRCoder Simplest1\uFR Coder Simplest\uFR Coder Simplest\bin\x86\Debug\uFR Coder Simplest.pdb
+F:\uFRNewRadniFolder\C#\MifareProject\uFRCoder Simplest1\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\uFRNewRadniFolder\C#\MifareProject\uFRCoder Simplest1\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR_Coder_Simplest.frmuFRCoderSimplest.resources
+F:\uFRNewRadniFolder\C#\MifareProject\uFRCoder Simplest1\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR_Coder_Simplest.Properties.Resources.resources
+F:\uFRNewRadniFolder\C#\MifareProject\uFRCoder Simplest1\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\uFRNewRadniFolder\C#\MifareProject\uFRCoder Simplest1\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\GenerateResource.write.1.tlog
+H:\uFRVers1.0.1\C#\MifareProject\uFRCoder Simplest1.0\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.exe
+H:\uFRVers1.0.1\C#\MifareProject\uFRCoder Simplest1.0\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.pdb
+H:\uFRVers1.0.1\C#\MifareProject\uFRCoder Simplest1.0\uFR Coder Simplest\uFR Coder Simplest\bin\x86\Debug\uFR Coder Simplest.exe
+H:\uFRVers1.0.1\C#\MifareProject\uFRCoder Simplest1.0\uFR Coder Simplest\uFR Coder Simplest\bin\x86\Debug\uFR Coder Simplest.pdb
+H:\uFRVers1.0.1\C#\MifareProject\uFRCoder Simplest1.0\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.csprojResolveAssemblyReference.cache
+H:\uFRVers1.0.1\C#\MifareProject\uFRCoder Simplest1.0\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR_Coder_Simplest.frmuFRCoderSimplest.resources
+H:\uFRVers1.0.1\C#\MifareProject\uFRCoder Simplest1.0\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR_Coder_Simplest.Properties.Resources.resources
+H:\uFRVers1.0.1\C#\MifareProject\uFRCoder Simplest1.0\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.csproj.GenerateResource.Cache
+H:\uFRVers1.0.1\C#\uFRCoder1.0.1\uFRCoder Simplest1.0.1\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.exe
+H:\uFRVers1.0.1\C#\uFRCoder1.0.1\uFRCoder Simplest1.0.1\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.pdb
+\\vmware-host\Shared Folders\Desktop\CMPS 411 Project\c#code for reader\C_Sharp_1.6\C_Sharp_Simplest_1.6\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.exe
+\\vmware-host\Shared Folders\Desktop\CMPS 411 Project\c#code for reader\C_Sharp_1.6\C_Sharp_Simplest_1.6\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.pdb
+\\vmware-host\Shared Folders\Desktop\CMPS 411 Project\c#code for reader\C_Sharp_1.6\C_Sharp_Simplest_1.6\uFR Coder Simplest\uFR Coder Simplest\bin\x86\Debug\uFR Coder Simplest.exe
+\\vmware-host\Shared Folders\Desktop\CMPS 411 Project\c#code for reader\C_Sharp_1.6\C_Sharp_Simplest_1.6\uFR Coder Simplest\uFR Coder Simplest\bin\x86\Debug\uFR Coder Simplest.pdb
+\\vmware-host\Shared Folders\Desktop\CMPS 411 Project\c#code for reader\C_Sharp_1.6\C_Sharp_Simplest_1.6\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.csprojResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Desktop\CMPS 411 Project\c#code for reader\C_Sharp_1.6\C_Sharp_Simplest_1.6\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR_Coder_Simplest.frmuFRCoderSimplest.resources
+\\vmware-host\Shared Folders\Desktop\CMPS 411 Project\c#code for reader\C_Sharp_1.6\C_Sharp_Simplest_1.6\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR_Coder_Simplest.Properties.Resources.resources
+\\vmware-host\Shared Folders\Desktop\CMPS 411 Project\c#code for reader\C_Sharp_1.6\C_Sharp_Simplest_1.6\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.csproj.GenerateResource.Cache
+\\vmware-host\Shared Folders\Desktop\411\trunk\Scan program\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.exe
+\\vmware-host\Shared Folders\Desktop\411\trunk\Scan program\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.pdb
+\\vmware-host\Shared Folders\Desktop\411\trunk\Scan program\uFR Coder Simplest\uFR Coder Simplest\bin\x86\Debug\uFR Coder Simplest.exe
+\\vmware-host\Shared Folders\Desktop\411\trunk\Scan program\uFR Coder Simplest\uFR Coder Simplest\bin\x86\Debug\uFR Coder Simplest.pdb
+\\vmware-host\Shared Folders\Desktop\411\trunk\Scan program\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.csprojResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Desktop\411\trunk\Scan program\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR_Coder_Simplest.frmuFRCoderSimplest.resources
+\\vmware-host\Shared Folders\Desktop\411\trunk\Scan program\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR_Coder_Simplest.Properties.Resources.resources
+\\vmware-host\Shared Folders\Desktop\411\trunk\Scan program\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.csproj.GenerateResource.Cache
+C:\Users\Tony\Desktop\School\CMPS 411\Cardreader info\Card desktop application\Scan program\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.exe
+C:\Users\Tony\Desktop\School\CMPS 411\Cardreader info\Card desktop application\Scan program\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.pdb
+C:\Users\Tony\Desktop\School\CMPS 411\Cardreader info\Card desktop application\Scan program\uFR Coder Simplest\uFR Coder Simplest\bin\x86\Debug\uFR Coder Simplest.exe
+C:\Users\Tony\Desktop\School\CMPS 411\Cardreader info\Card desktop application\Scan program\uFR Coder Simplest\uFR Coder Simplest\bin\x86\Debug\uFR Coder Simplest.pdb
+C:\Users\Tony\Desktop\School\CMPS 411\Cardreader info\Card desktop application\Scan program\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.csprojResolveAssemblyReference.cache
+C:\Users\Tony\Desktop\School\CMPS 411\Cardreader info\Card desktop application\Scan program\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR_Coder_Simplest.frmuFRCoderSimplest.resources
+C:\Users\Tony\Desktop\School\CMPS 411\Cardreader info\Card desktop application\Scan program\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR_Coder_Simplest.Properties.Resources.resources
+C:\Users\Tony\Desktop\School\CMPS 411\Cardreader info\Card desktop application\Scan program\uFR Coder Simplest\uFR Coder Simplest\obj\x86\Debug\uFR Coder Simplest.csproj.GenerateResource.Cache

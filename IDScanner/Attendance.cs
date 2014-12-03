@@ -17,6 +17,7 @@ namespace IDScanner
         public string SID { get; set; }
         public System.DateTime Clock_In { get; set; }
         public Nullable<System.DateTime> Clock_Out { get; set; }
+        public string ID { get; set; }
     
         public virtual Student Student { get; set; }
     }

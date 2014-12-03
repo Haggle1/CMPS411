@@ -1,9 +1,199 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="SchoolTrackerModelStoreContainer" CdmEntityContainer="SchoolTrackerEntities1">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.C__MigrationHistory)">
+        <MappingFragment StoreEntitySet="C__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Applications">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_Applications)">
+        <MappingFragment StoreEntitySet="aspnet_Applications">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Membership">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_Membership)">
+        <MappingFragment StoreEntitySet="aspnet_Membership">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Paths">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_Paths)">
+        <MappingFragment StoreEntitySet="aspnet_Paths">
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationAllUsers">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_PersonalizationAllUsers)">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationAllUsers">
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationPerUser">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_PersonalizationPerUser)">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationPerUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Profile">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_Profile)">
+        <MappingFragment StoreEntitySet="aspnet_Profile">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+          <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+          <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Roles">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_Roles)">
+        <MappingFragment StoreEntitySet="aspnet_Roles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_SchemaVersions">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_SchemaVersions)">
+        <MappingFragment StoreEntitySet="aspnet_SchemaVersions">
+          <ScalarProperty Name="Feature" ColumnName="Feature" />
+          <ScalarProperty Name="CompatibleSchemaVersion" ColumnName="CompatibleSchemaVersion" />
+          <ScalarProperty Name="IsCurrentVersion" ColumnName="IsCurrentVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Users">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_Users)">
+        <MappingFragment StoreEntitySet="aspnet_Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_WebEvent_Events">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.aspnet_WebEvent_Events)">
+        <MappingFragment StoreEntitySet="aspnet_WebEvent_Events">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="EventTimeUtc" ColumnName="EventTimeUtc" />
+          <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="EventSequence" ColumnName="EventSequence" />
+          <ScalarProperty Name="EventOccurrence" ColumnName="EventOccurrence" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="EventDetailCode" ColumnName="EventDetailCode" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="ApplicationPath" ColumnName="ApplicationPath" />
+          <ScalarProperty Name="ApplicationVirtualPath" ColumnName="ApplicationVirtualPath" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+          <ScalarProperty Name="ExceptionType" ColumnName="ExceptionType" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.AspNetRole)">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.AspNetUserClaim)">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.AspNetUserLogin)">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.AspNetUser)">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Attendances">
       <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.Attendance)">
         <MappingFragment StoreEntitySet="Attendances">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="SID" ColumnName="SID" />
           <ScalarProperty Name="Clock_In" ColumnName="Clock_In" />
           <ScalarProperty Name="Clock_Out" ColumnName="Clock_Out" />
@@ -22,27 +212,10 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Faculties">
-      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.Faculty)">
-        <MappingFragment StoreEntitySet="Faculties">
-          <ScalarProperty Name="FID" ColumnName="FID" />
-          <ScalarProperty Name="Fac_Fname" ColumnName="Fac_Fname" />
-          <ScalarProperty Name="Fac_Lname" ColumnName="Fac_Lname" />
-          <ScalarProperty Name="AccessLvl" ColumnName="AccessLvl" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Logins">
-      <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.Login)">
-        <MappingFragment StoreEntitySet="Logins">
-          <ScalarProperty Name="FID" ColumnName="FID" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Schedules">
       <EntityTypeMapping TypeName="IsTypeOf(SchoolTrackerModel.Schedule)">
         <MappingFragment StoreEntitySet="Schedules">
+          <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="CourseID" ColumnName="CourseID" />
         </MappingFragment>
@@ -68,5 +241,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <AssociationSetMapping Name="aspnet_UsersInRoles" TypeName="SchoolTrackerModel.aspnet_UsersInRoles" StoreEntitySet="aspnet_UsersInRoles">
+      <EndProperty Name="aspnet_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="aspnet_Roles_RoleId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_Users">
+        <ScalarProperty Name="UserId" ColumnName="aspnet_Users_UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="SchoolTrackerModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRole">
+        <ScalarProperty Name="Id" ColumnName="AspNetRoles_Id" />
+      </EndProperty>
+      <EndProperty Name="AspNetUser">
+        <ScalarProperty Name="Id" ColumnName="AspNetUsers_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

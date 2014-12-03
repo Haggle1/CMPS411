@@ -16,6 +16,7 @@ namespace IDScanner
     {
         public Student()
         {
+            this.Attendances = new HashSet<Attendance>();
             this.Schedules = new HashSet<Schedule>();
         }
     
@@ -23,7 +24,7 @@ namespace IDScanner
         public string Fname { get; set; }
         public string Lname { get; set; }
     
-        public virtual Attendance Attendance { get; set; }
+        public virtual ICollection<Attendance> Attendances { get; set; }
         public virtual ICollection<Schedule> Schedules { get; set; }
     }
 }
